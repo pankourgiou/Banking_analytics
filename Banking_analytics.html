@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Intelligence Report — Greece · Europe · World | 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS — LIGHT PROFESSIONAL THEME
+═══════════════════════════════════════════ */
+:root {
+  --bg:         #f4f5f7;
+  --surface:    #ffffff;
+  --surface-2:  #f8f9fb;
+  --border:     #e2e6ed;
+  --border-hi:  #c8d0dc;
+
+  --navy:       #0f2044;
+  --navy-mid:   #1a3560;
+  --navy-light: #2e4f82;
+  --gold:       #b8860b;
+  --gold-light: #d4a017;
+  --blue:       #1d6fa4;
+  --blue-light: #3a9bd5;
+  --red:        #c0392b;
+  --red-light:  #e74c3c;
+  --green:      #1a7a4a;
+  --green-light:#27ae60;
+  --amber:      #c97a10;
+  --amber-light:#e67e22;
+  --violet:     #6c3483;
+  --slate:      #546e8a;
+
+  --text:       #0f1923;
+  --text-2:     #2c3e50;
+  --muted:      #6b7a99;
+  --faint:      #a0aec0;
+
+  --font-display: 'Libre Baskerville', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --shadow-sm:  0 1px 3px rgba(15,32,68,0.08);
+  --shadow-md:  0 4px 16px rgba(15,32,68,0.1);
+  --shadow-lg:  0 8px 32px rgba(15,32,68,0.12);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:3px;}
+
+/* ═══════════════════════════════════════════
+   MASTHEAD
+═══════════════════════════════════════════ */
+.masthead{
+  background:var(--navy);
+  position:sticky;top:0;z-index:200;
+  border-bottom:3px solid var(--gold);
+}
+.masthead-inner{
+  max-width:1440px;margin:0 auto;
+  display:flex;align-items:center;gap:0;
+  height:52px;
+}
+.brand{
+  padding:0 2rem;border-right:1px solid rgba(255,255,255,0.12);
+  display:flex;align-items:center;gap:0.75rem;flex-shrink:0;
+}
+.brand-flag{font-size:1.3rem;}
+.brand-name{
+  font-family:var(--font-display);
+  font-size:1rem;font-weight:700;color:#fff;letter-spacing:0.01em;
+}
+.brand-name span{color:var(--gold-light);}
+nav{display:flex;flex:1;overflow-x:auto;}
+.nav-link{
+  font-family:var(--font-mono);
+  font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0 1.1rem;height:52px;
+  display:flex;align-items:center;
+  color:rgba(255,255,255,0.55);text-decoration:none;
+  border-right:1px solid rgba(255,255,255,0.08);
+  transition:all 0.15s;white-space:nowrap;
+}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.06);}
+.nav-link.active{color:var(--gold-light);}
+.masthead-right{
+  margin-left:auto;padding:0 1.5rem;
+  display:flex;align-items:center;gap:1rem;flex-shrink:0;
+}
+.live-pill{
+  display:flex;align-items:center;gap:0.4rem;
+  background:rgba(39,174,96,0.18);border:1px solid rgba(39,174,96,0.4);
+  border-radius:2rem;padding:0.2rem 0.7rem;
+  font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;
+  color:#5dde8a;
+}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#5dde8a;animation:pulse 2s ease-in-out infinite;}
+.ts{font-family:var(--font-mono);font-size:0.6rem;color:rgba(255,255,255,0.35);}
+
+/* ═══════════════════════════════════════════
+   HERO BANNER
+═══════════════════════════════════════════ */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,var(--navy-light) 100%);
+  padding:3.5rem 2.5rem 0;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.hero-inner{max-width:1440px;margin:0 auto;position:relative;z-index:1;}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.5rem;}
+.hero-text{}
+.hero-eyebrow{
+  font-family:var(--font-mono);
+  font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--gold-light);margin-bottom:0.75rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold-light);}
+.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:700;line-height:1.15;
+  color:#fff;margin-bottom:0.75rem;
+}
+.hero-title em{font-style:italic;color:var(--gold-light);}
+.hero-subtitle{
+  font-size:1rem;color:rgba(255,255,255,0.6);
+  max-width:620px;line-height:1.7;
+}
+.hero-meta{text-align:right;}
+.hero-meta-row{
+  font-family:var(--font-mono);font-size:0.64rem;
+  color:rgba(255,255,255,0.4);line-height:2;letter-spacing:0.04em;
+}
+
+/* KPI STRIP */
+.kpi-strip{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  border-top:1px solid rgba(255,255,255,0.1);
+  background:rgba(0,0,0,0.15);
+}
+@media(max-width:1100px){.kpi-strip{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.kpi-strip{grid-template-columns:repeat(2,1fr);}}
+.kpi{
+  padding:1.4rem 1.5rem;
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+.kpi:last-child{border-right:none;}
+.kpi-label{
+  font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.5rem;
+}
+.kpi-val{
+  font-family:var(--font-display);font-size:1.75rem;font-weight:700;
+  line-height:1;color:#fff;margin-bottom:0.3rem;
+}
+.kpi-delta{font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.04em;}
+.up{color:#5dde8a;}
+.dn{color:#ff7c7c;}
+.nu{color:rgba(255,255,255,0.4);}
+.kpi-src{font-size:0.62rem;color:rgba(255,255,255,0.28);margin-top:0.2rem;}
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+.page{max-width:1440px;margin:0 auto;padding:0 2rem;}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:0;}
+@media(max-width:960px){.layout{grid-template-columns:1fr;}}
+
+/* SIDEBAR */
+.sidebar{
+  background:var(--surface);
+  border-right:1px solid var(--border);
+  padding:1.5rem;
+  position:sticky;top:52px;
+  height:calc(100vh - 52px);
+  overflow-y:auto;
+}
+.sb-section{margin-bottom:1.75rem;}
+.sb-title{
+  font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--muted);
+  padding-bottom:0.5rem;border-bottom:1px solid var(--border);
+  margin-bottom:0.85rem;
+}
+.sb-table{width:100%;border-collapse:collapse;}
+.sb-table tr{border-bottom:1px solid var(--border);}
+.sb-table tr:last-child{border-bottom:none;}
+.sb-table td{
+  padding:0.45rem 0.2rem;
+  font-family:var(--font-mono);font-size:0.64rem;color:var(--muted);
+}
+.sb-table td:last-child{text-align:right;color:var(--text);}
+.sb-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:0.4rem;}
+.filter-lbl{font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);display:block;margin-bottom:0.3rem;letter-spacing:0.05em;}
+.filter-sel{
+  width:100%;background:var(--surface-2);border:1px solid var(--border);
+  color:var(--text);font-family:var(--font-mono);font-size:0.66rem;
+  padding:0.45rem 0.7rem;border-radius:3px;outline:none;cursor:pointer;
+  margin-bottom:0.65rem;appearance:none;
+}
+.filter-sel:focus{border-color:var(--blue);}
+.risk-item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0.4rem 0;border-bottom:1px solid var(--border);
+  font-size:0.64rem;
+}
+.risk-item:last-child{border-bottom:none;}
+.risk-label{color:var(--text-2);}
+.risk-val{font-family:var(--font-mono);font-size:0.6rem;}
+.risk-bar-wrap{width:60px;height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-left:0.5rem;}
+.risk-bar{height:100%;border-radius:2px;}
+
+/* ═══════════════════════════════════════════
+   DASHBOARD MAIN
+═══════════════════════════════════════════ */
+.dashboard{padding:1.75rem;display:flex;flex-direction:column;gap:2rem;}
+
+/* Section blocks */
+.sec-block{display:flex;flex-direction:column;gap:1.25rem;}
+.sec-hd{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding-bottom:0.9rem;border-bottom:2px solid var(--navy);
+  flex-wrap:wrap;gap:0.5rem;
+}
+.sec-hd-left{}
+.sec-num{
+  font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.15em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:0.2rem;
+}
+.sec-title{
+  font-family:var(--font-display);font-size:1.25rem;
+  font-weight:700;color:var(--navy);
+}
+.sec-sub{
+  font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;
+  color:var(--muted);margin-top:0.2rem;
+}
+.sec-badge{
+  font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.07em;
+  padding:0.3rem 0.7rem;border-radius:3px;
+  background:var(--surface-2);border:1px solid var(--border);
+  color:var(--muted);white-space:nowrap;
+  align-self:flex-start;
+}
+
+/* PANELS */
+.panel{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:4px;
+  box-shadow:var(--shadow-sm);
+  overflow:hidden;
+}
+.panel-hd{
+  padding:0.85rem 1.25rem;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:0.4rem;
+  background:var(--surface-2);
+}
+.panel-title{
+  font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--navy);
+  display:flex;align-items:center;gap:0.5rem;
+}
+.ptdot{width:7px;height:7px;border-radius:50%;}
+.panel-meta{font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);}
+.panel-body{padding:1.25rem;}
+
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+@media(max-width:1200px){.g3{grid-template-columns:1fr 1fr;}.g4{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr;}}
+
+/* ═══════════════════════════════════════════
+   TABLES
+═══════════════════════════════════════════ */
+.dtable{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:0.7rem;}
+.dtable thead th{
+  font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--navy);padding:0.7rem 1rem;text-align:left;
+  border-bottom:2px solid var(--navy);background:var(--surface-2);
+  white-space:nowrap;font-weight:600;
+}
+.dtable tbody tr{border-bottom:1px solid var(--border);transition:background 0.1s;}
+.dtable tbody tr:hover{background:var(--surface-2);}
+.dtable tbody tr:last-child{border-bottom:none;}
+.dtable td{padding:0.72rem 1rem;color:var(--muted);vertical-align:middle;white-space:nowrap;}
+.dtable td.name{color:var(--text);font-weight:500;}
+.dtable td.val{color:var(--text-2);}
+.dtable td.pos{color:var(--green);}
+.dtable td.neg{color:var(--red);}
+.dtable td.warn{color:var(--amber);}
+.dtable tr.highlight td{background:rgba(15,32,68,0.04);color:var(--navy);font-weight:600;}
+
+/* TAGS / BADGES */
+.tag{
+  font-family:var(--font-mono);font-size:0.57rem;letter-spacing:0.07em;
+  text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:3px;
+  display:inline-flex;align-items:center;white-space:nowrap;
+}
+.t-green {background:rgba(26,122,74,0.1); color:var(--green); border:1px solid rgba(26,122,74,0.25);}
+.t-red   {background:rgba(192,57,43,0.1); color:var(--red);   border:1px solid rgba(192,57,43,0.25);}
+.t-amber {background:rgba(201,122,16,0.1);color:var(--amber); border:1px solid rgba(201,122,16,0.25);}
+.t-blue  {background:rgba(29,111,164,0.1);color:var(--blue);  border:1px solid rgba(29,111,164,0.25);}
+.t-navy  {background:rgba(15,32,68,0.08); color:var(--navy);  border:1px solid rgba(15,32,68,0.2);}
+.t-violet{background:rgba(108,52,131,0.1);color:var(--violet);border:1px solid rgba(108,52,131,0.25);}
+
+/* SPARK BARS */
+.spark{display:flex;align-items:center;gap:0.5rem;}
+.spark-track{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;min-width:50px;}
+.spark-fill{height:100%;border-radius:2px;transition:width 1.2s ease;}
+
+/* INLINE STAT */
+.istat{text-align:center;padding:1rem 0.5rem;}
+.istat-val{
+  font-family:var(--font-display);font-size:2rem;font-weight:700;
+  color:var(--navy);line-height:1;display:block;margin-bottom:0.25rem;
+}
+.istat-lbl{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);}
+.istat-delta{font-family:var(--font-mono);font-size:0.65rem;margin-top:0.2rem;}
+
+/* DIVIDER */
+.div-h{height:1px;background:var(--border);margin:0;}
+
+/* CHART CONTAINER */
+.ch{position:relative;width:100%;}
+
+/* ═══════════════════════════════════════════
+   CITATIONS FOOTER
+═══════════════════════════════════════════ */
+.cit-section{
+  background:var(--surface);border-top:1px solid var(--border);
+  padding:2rem 2.5rem 2.5rem;
+}
+.cit-title{
+  font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:1rem;
+}
+.cit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:0.4rem;}
+.cit{font-family:var(--font-mono);font-size:0.64rem;color:var(--faint);line-height:1.6;}
+.cit sup{color:var(--blue);}
+
+/* PAGE FOOTER */
+.page-footer{
+  background:var(--navy);color:rgba(255,255,255,0.4);
+  padding:1.5rem 2.5rem;
+  font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.08em;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.revealed{opacity:1;transform:none;}
+
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ MASTHEAD ═══════════ -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-flag">🏛</span>
+      <span class="brand-name">Bank<span>Analytics</span></span>
+    </div>
+    <nav>
+      <a class="nav-link active" href="#greece">Greece</a>
+      <a class="nav-link" href="#europe">Eurozone</a>
+      <a class="nav-link" href="#global">Global</a>
+      <a class="nav-link" href="#stress">Stress Tests</a>
+      <a class="nav-link" href="#npl">NPL & Credit</a>
+      <a class="nav-link" href="#digital">Digital Banking</a>
+      <a class="nav-link" href="#regulation">Regulation</a>
+      <a class="nav-link" href="#forecast">Forecast</a>
+    </nav>
+    <div class="masthead-right">
+      <div class="live-pill"><span class="live-dot"></span>LIVE</div>
+      <span class="ts" id="ts"></span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-row">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Statistical Intelligence Report</div>
+        <h1 class="hero-title">
+          Banking in <em>Greece</em>,<br>Europe & the World
+        </h1>
+        <p class="hero-subtitle">A comprehensive, data-driven analysis of the Greek banking sector in its European and global context — covering capital adequacy, credit quality, profitability, liquidity, systemic risk, digital transformation, and the regulatory framework shaping 2025–2030.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-row">Sources: ECB · Bank of Greece · IMF · World Bank · BIS · EBA</div>
+        <div class="hero-meta-row">S&P Global · Moody's · Fitch · Eurostat · FDIC · Fed</div>
+        <div class="hero-meta-row">Historical: 2005 – 2025 &nbsp;|&nbsp; Forecast: 2026 – 2030E</div>
+        <div class="hero-meta-row">Last updated: March 2026</div>
+      </div>
+    </div>
+    <div class="kpi-strip">
+      <div class="kpi">
+        <div class="kpi-label">Greek Banking Assets</div>
+        <div class="kpi-val">€336B</div>
+        <div class="kpi-delta up">↑ +4.2% YoY</div>
+        <div class="kpi-src">Bank of Greece, 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">NPL Ratio (Greece)</div>
+        <div class="kpi-val">8.7%</div>
+        <div class="kpi-delta up">↓ from 47.5% (2017)</div>
+        <div class="kpi-src">EBA Risk Dashboard, Q3 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">CET1 Ratio (Greece)</div>
+        <div class="kpi-val">16.2%</div>
+        <div class="kpi-delta up">↑ above 8% min.</div>
+        <div class="kpi-src">ECB Banking Supervision, 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Eurozone Bank Assets</div>
+        <div class="kpi-val">€32.4T</div>
+        <div class="kpi-delta up">↑ +3.1% YoY</div>
+        <div class="kpi-src">ECB Statistical Data, 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Global Bank Assets</div>
+        <div class="kpi-val">$183T</div>
+        <div class="kpi-delta up">↑ +5.8% YoY</div>
+        <div class="kpi-src">IMF Global Financial Stability, 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">ECB Deposit Rate</div>
+        <div class="kpi-val">2.50%</div>
+        <div class="kpi-delta dn">↓ from 4.0% (2024)</div>
+        <div class="kpi-src">ECB, March 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ MAIN LAYOUT ═══════════ -->
+<div class="page">
+<div class="layout">
+
+<!-- ═══════════ SIDEBAR ═══════════ -->
+<aside class="sidebar">
+  <div class="sb-section">
+    <div class="sb-title">Filters</div>
+    <label class="filter-lbl">View Period</label>
+    <select class="filter-sel"><option>2005–2025 (Full)</option><option>2010–2015 (Crisis)</option><option>2015–2020 (Recovery)</option><option>2020–2025 (Stabilisation)</option></select>
+    <label class="filter-lbl">Geography</label>
+    <select class="filter-sel"><option>All (GR + EU + World)</option><option>Greece Only</option><option>Eurozone</option><option>EU27</option><option>Global</option></select>
+    <label class="filter-lbl">Bank Segment</label>
+    <select class="filter-sel"><option>All Banks</option><option>Systemic (SSM)</option><option>Retail</option><option>Investment</option><option>Development</option></select>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-title">Greek Big 4 — CET1 Ratios (2025)</div>
+    <table class="sb-table">
+      <tr><td><span class="sb-dot" style="background:#1d6fa4"></span>Eurobank</td><td class="pos">18.4%</td></tr>
+      <tr><td><span class="sb-dot" style="background:#1a7a4a"></span>Alpha Bank</td><td class="pos">17.1%</td></tr>
+      <tr><td><span class="sb-dot" style="background:#b8860b"></span>Piraeus Bank</td><td class="pos">16.8%</td></tr>
+      <tr><td><span class="sb-dot" style="background:#c0392b"></span>NBG</td><td class="pos">18.9%</td></tr>
+    </table>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-title">Greek Big 4 — NPL Ratios (2025)</div>
+    <table class="sb-table">
+      <tr><td>Eurobank</td><td class="warn">5.2%</td></tr>
+      <tr><td>Alpha Bank</td><td class="warn">8.1%</td></tr>
+      <tr><td>Piraeus Bank</td><td class="warn">9.7%</td></tr>
+      <tr><td>NBG</td><td class="warn">6.4%</td></tr>
+    </table>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-title">EU NPL Ratios by Country (Q3 2025)</div>
+    <table class="sb-table">
+      <tr><td>Greece 🇬🇷</td><td class="neg">8.7%</td></tr>
+      <tr><td>Cyprus 🇨🇾</td><td class="neg">7.1%</td></tr>
+      <tr><td>Portugal 🇵🇹</td><td class="warn">3.2%</td></tr>
+      <tr><td>Italy 🇮🇹</td><td class="warn">2.9%</td></tr>
+      <tr><td>Spain 🇪🇸</td><td>2.3%</td></tr>
+      <tr><td>Ireland 🇮🇪</td><td>1.8%</td></tr>
+      <tr><td>Germany 🇩🇪</td><td>1.4%</td></tr>
+      <tr><td>France 🇫🇷</td><td>1.3%</td></tr>
+      <tr><td>Netherlands 🇳🇱</td><td>1.1%</td></tr>
+      <tr><td>EU Average</td><td class="val">1.9%</td></tr>
+    </table>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-title">Systemic Risk Indicators</div>
+    <div class="risk-item">
+      <span class="risk-label">Greek NPL</span>
+      <span class="risk-val neg">High</span>
+      <div class="risk-bar-wrap"><div class="risk-bar" style="width:87%;background:var(--red)"></div></div>
+    </div>
+    <div class="risk-item">
+      <span class="risk-label">Capital Buffer</span>
+      <span class="risk-val pos">Adequate</span>
+      <div class="risk-bar-wrap"><div class="risk-bar" style="width:65%;background:var(--green)"></div></div>
+    </div>
+    <div class="risk-item">
+      <span class="risk-label">Liquidity (LCR)</span>
+      <span class="risk-val pos">Strong</span>
+      <div class="risk-bar-wrap"><div class="risk-bar" style="width:78%;background:var(--blue)"></div></div>
+    </div>
+    <div class="risk-item">
+      <span class="risk-label">Sovereign Exposure</span>
+      <span class="risk-val warn">Moderate</span>
+      <div class="risk-bar-wrap"><div class="risk-bar" style="width:55%;background:var(--amber)"></div></div>
+    </div>
+    <div class="risk-item">
+      <span class="risk-label">Interest Rate Risk</span>
+      <span class="risk-val warn">Moderate</span>
+      <div class="risk-bar-wrap"><div class="risk-bar" style="width:50%;background:var(--amber)"></div></div>
+    </div>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-title">Credit Ratings (2025)</div>
+    <table class="sb-table">
+      <tr><td>Greece (S&P)</td><td class="pos">BBB−</td></tr>
+      <tr><td>Greece (Moody's)</td><td class="pos">Baa3</td></tr>
+      <tr><td>Greece (Fitch)</td><td class="pos">BBB−</td></tr>
+      <tr><td>Eurobank</td><td class="warn">BB+</td></tr>
+      <tr><td>Alpha Bank</td><td class="warn">BB+</td></tr>
+      <tr><td>Piraeus</td><td class="warn">BB</td></tr>
+      <tr><td>NBG</td><td class="warn">BB+</td></tr>
+    </table>
+  </div>
+</aside>
+
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<main class="dashboard">
+
+<!-- ══════════════════════════════════
+     SECTION 1 — GREEK BANKING
+══════════════════════════════════ -->
+<section class="sec-block" id="greece">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 01</div>
+      <div class="sec-title">Greek Banking Sector — Deep Dive</div>
+      <div class="sec-sub">ASSETS · CAPITAL ADEQUACY · NPL TRAJECTORY · PROFITABILITY · STRUCTURAL REFORM 2010–2025</div>
+    </div>
+    <span class="sec-badge">Bank of Greece · ECB SSM · EBA · ESM · 2025</span>
+  </div>
+
+  <!-- Inline stats row -->
+  <div class="g4 reveal">
+    <div class="panel"><div class="panel-body">
+      <div class="istat">
+        <span class="istat-val" style="color:var(--navy)">€336B</span>
+        <span class="istat-lbl">Total Banking Assets</span>
+        <div class="istat-delta up">↑ +4.2% YoY · 2025</div>
+      </div>
+    </div></div>
+    <div class="panel"><div class="panel-body">
+      <div class="istat">
+        <span class="istat-val" style="color:var(--red)">8.7%</span>
+        <span class="istat-lbl">NPL Ratio (EBA)</span>
+        <div class="istat-delta up">↓ from 47.5% peak (2017)</div>
+      </div>
+    </div></div>
+    <div class="panel"><div class="panel-body">
+      <div class="istat">
+        <span class="istat-val" style="color:var(--green)">16.2%</span>
+        <span class="istat-lbl">Avg CET1 Capital Ratio</span>
+        <div class="istat-delta up">↑ vs 8% regulatory min.</div>
+      </div>
+    </div></div>
+    <div class="panel"><div class="panel-body">
+      <div class="istat">
+        <span class="istat-val" style="color:var(--blue)">9.1%</span>
+        <span class="istat-lbl">Return on Equity (RoE)</span>
+        <div class="istat-delta up">↑ from −7.8% (2020)</div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- NPL Trajectory -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>Greek Banking NPL Ratio (%) — 2010–2025</span>
+        <span class="panel-meta">EBA Risk Dashboard · Bank of Greece</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-npl"></canvas></div>
+      </div>
+    </div>
+    <!-- CET1 Capital -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--green)"></span>CET1 Capital Ratio — Big 4 Greek Banks (2015–2025)</span>
+        <span class="panel-meta">ECB Banking Supervision · Annual</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-cet1"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Total Assets -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>Greek Banking Sector Total Assets (€ Billion) 2005–2025</span>
+        <span class="panel-meta">Bank of Greece Annual Report</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-assets-gr"></canvas></div>
+      </div>
+    </div>
+    <!-- Profitability -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--blue)"></span>Greek Banks RoE & RoA (%) — 2010–2025</span>
+        <span class="panel-meta">ECB Consolidated Banking Data</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-profitability"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Greek Banks Detail Table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--gold)"></span>Greek Systemic Banks — Key Financials 2025</span>
+      <span class="panel-meta">Annual Reports · ECB SSM Disclosures · EBA Transparency Exercise</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>BANK</th><th>TOTAL ASSETS</th><th>LOANS (NET)</th><th>DEPOSITS</th>
+          <th>CET1 RATIO</th><th>NPL RATIO</th><th>NPL COVERAGE</th>
+          <th>LCR</th><th>RoE</th><th>NIM</th><th>RATING (S&P)</th>
+        </tr></thead>
+        <tbody>
+          <tr class="highlight">
+            <td class="name">National Bank of Greece (NBG)</td>
+            <td class="val">€97.4B</td><td class="val">€38.2B</td><td class="val">€60.8B</td>
+            <td class="pos">18.9%</td><td class="warn">6.4%</td><td class="val">72%</td>
+            <td class="pos">182%</td><td class="pos">11.2%</td><td class="val">2.84%</td>
+            <td><span class="tag t-amber">BB+</span></td>
+          </tr>
+          <tr>
+            <td class="name">Eurobank Ergasias</td>
+            <td class="val">€95.1B</td><td class="val">€44.6B</td><td class="val">€56.3B</td>
+            <td class="pos">18.4%</td><td class="warn">5.2%</td><td class="val">78%</td>
+            <td class="pos">175%</td><td class="pos">12.8%</td><td class="val">2.91%</td>
+            <td><span class="tag t-amber">BB+</span></td>
+          </tr>
+          <tr>
+            <td class="name">Alpha Bank</td>
+            <td class="val">€74.3B</td><td class="val">€36.9B</td><td class="val">€48.1B</td>
+            <td class="pos">17.1%</td><td class="warn">8.1%</td><td class="val">69%</td>
+            <td class="pos">163%</td><td class="pos">9.4%</td><td class="val">2.76%</td>
+            <td><span class="tag t-amber">BB+</span></td>
+          </tr>
+          <tr>
+            <td class="name">Piraeus Financial Holdings</td>
+            <td class="val">€69.8B</td><td class="val">€34.7B</td><td class="val">€44.9B</td>
+            <td class="pos">16.8%</td><td class="neg">9.7%</td><td class="val">65%</td>
+            <td class="pos">158%</td><td class="pos">8.1%</td><td class="val">2.68%</td>
+            <td><span class="tag t-amber">BB</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Greek Crisis Timeline -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--gold)"></span>Greek Banking Crisis & Recovery — Key Milestones & Statistical Impact</span>
+      <span class="panel-meta">ESM · IMF · Bank of Greece · ECB</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr><th>PERIOD</th><th>EVENT</th><th>BANKING ASSETS</th><th>NPL RATIO</th><th>CET1</th><th>DEPOSITS LOST</th><th>ESM/IMF AID</th><th>IMPACT ASSESSMENT</th></tr></thead>
+        <tbody>
+          <tr><td class="name">2009–2010</td><td>Sovereign debt crisis begins; credit ratings cut</td><td class="val">€486B</td><td class="neg">7.1%</td><td class="warn">11.2%</td><td>—</td><td>—</td><td><span class="tag t-red">CRITICAL</span></td></tr>
+          <tr><td class="name">2010–2012</td><td>1st & 2nd bailout programmes; PSI haircut 53.5%</td><td class="val">€461B</td><td class="neg">18.4%</td><td class="neg">7.3%</td><td class="neg">−€72B</td><td>€110B + €130B</td><td><span class="tag t-red">SEVERE</span></td></tr>
+          <tr><td class="name">2012–2013</td><td>Recapitalisation €50B via HFSF; bank mergers</td><td class="val">€432B</td><td class="neg">26.8%</td><td class="warn">9.1%</td><td class="neg">−€38B</td><td>€50B HFSF</td><td><span class="tag t-red">SEVERE</span></td></tr>
+          <tr><td class="name">2015</td><td>Capital controls imposed; ECB ELA peak €89B</td><td class="val">€397B</td><td class="neg">36.4%</td><td class="neg">7.8%</td><td class="neg">−€44B</td><td>€86B (3rd prog.)</td><td><span class="tag t-red">CRITICAL</span></td></tr>
+          <tr><td class="name">2015–2018</td><td>3rd bailout; 2nd recapitalisation; SSM entry</td><td class="val">€381B</td><td class="neg">45.4%</td><td class="warn">12.8%</td><td>Stabilised</td><td>€86B total</td><td><span class="tag t-amber">DISTRESSED</span></td></tr>
+          <tr><td class="name">2018–2021</td><td>Hercules APS securitisation; NPL sales begin</td><td class="val">€314B</td><td class="neg">30.1%</td><td class="warn">14.1%</td><td>Recovery begins</td><td>State guarantee</td><td><span class="tag t-amber">RECOVERY</span></td></tr>
+          <tr><td class="name">2021–2023</td><td>Hercules II; NPL ratio below 20%; HFSF exit</td><td class="val">€308B</td><td class="warn">12.7%</td><td class="pos">15.4%</td><td>Inflows</td><td>—</td><td><span class="tag t-blue">IMPROVING</span></td></tr>
+          <tr class="highlight"><td class="name">2023–2025</td><td>Investment grade restored; HFSF fully exits banks</td><td class="val">€336B</td><td class="warn">8.7%</td><td class="pos">16.2%</td><td>Strong inflows</td><td>—</td><td><span class="tag t-green">STABILISED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 2 — EUROZONE BANKING
+══════════════════════════════════ -->
+<section class="sec-block" id="europe">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 02</div>
+      <div class="sec-title">Eurozone Banking — Structure & Performance</div>
+      <div class="sec-sub">CAPITAL RATIOS · NPL BY COUNTRY · NET INTEREST MARGIN · ECB MONETARY POLICY IMPACT · CONCENTRATION</div>
+    </div>
+    <span class="sec-badge">ECB · EBA · ESM · Eurostat · S&P Global · 2025</span>
+  </div>
+
+  <div class="g4 reveal">
+    <div class="panel"><div class="panel-body"><div class="istat">
+      <span class="istat-val" style="color:var(--navy)">€32.4T</span>
+      <span class="istat-lbl">Eurozone Bank Assets</span>
+      <div class="istat-delta up">↑ +3.1% YoY</div>
+    </div></div></div>
+    <div class="panel"><div class="panel-body"><div class="istat">
+      <span class="istat-val" style="color:var(--green)">15.8%</span>
+      <span class="istat-lbl">Avg CET1 (EU Banks)</span>
+      <div class="istat-delta up">↑ from 12.3% (2015)</div>
+    </div></div></div>
+    <div class="panel"><div class="panel-body"><div class="istat">
+      <span class="istat-val" style="color:var(--amber)">1.9%</span>
+      <span class="istat-lbl">EU Average NPL Ratio</span>
+      <div class="istat-delta up">↓ from 5.4% (2018)</div>
+    </div></div></div>
+    <div class="panel"><div class="panel-body"><div class="istat">
+      <span class="istat-val" style="color:var(--blue)">8.4%</span>
+      <span class="istat-lbl">Avg RoE (EU Banks)</span>
+      <div class="istat-delta up">↑ from 1.2% (2020)</div>
+    </div></div></div>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- EU CET1 by country -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>CET1 Ratio by Country (%) — Eurozone, Q3 2025</span>
+        <span class="panel-meta">EBA Risk Dashboard</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:250px"><canvas id="ch-eu-cet1"></canvas></div>
+      </div>
+    </div>
+    <!-- EU NPL by country -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>NPL Ratio by Country (%) — EU, Q3 2025</span>
+        <span class="panel-meta">EBA Risk Dashboard · ECB CBD</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:250px"><canvas id="ch-eu-npl"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- ECB rate impact on NIM -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--blue)"></span>ECB Policy Rate vs EU Bank Net Interest Margin (%) — 2015–2026</span>
+        <span class="panel-meta">ECB Monetary Policy · EBA</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-nim-ecb"></canvas></div>
+      </div>
+    </div>
+    <!-- EU bank profitability RoE trend -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--green)"></span>EU Banking Sector RoE by Country (%) — 2025</span>
+        <span class="panel-meta">ECB Consolidated Banking Data</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-eu-roe"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EU systemic banks table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>European Systemically Important Banks (G-SIBs / O-SIIs) — Key Metrics 2025</span>
+      <span class="panel-meta">FSB G-SIB List · ECB SSM · Annual Reports 2025</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>BANK</th><th>COUNTRY</th><th>TOTAL ASSETS</th><th>TIER 1 CAPITAL</th>
+          <th>CET1</th><th>NPL RATIO</th><th>LCR</th><th>RoE (2025)</th><th>G-SIB BUCKET</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="name">BNP Paribas</td><td>🇫🇷 France</td><td class="val">€2.87T</td><td class="val">€128B</td><td class="pos">13.8%</td><td>2.1%</td><td class="pos">145%</td><td class="pos">9.7%</td><td><span class="tag t-red">Bucket 3</span></td></tr>
+          <tr><td class="name">Deutsche Bank</td><td>🇩🇪 Germany</td><td class="val">€1.64T</td><td class="val">€61B</td><td class="pos">13.9%</td><td>1.5%</td><td class="pos">138%</td><td class="pos">7.3%</td><td><span class="tag t-amber">Bucket 1</span></td></tr>
+          <tr><td class="name">Crédit Agricole</td><td>🇫🇷 France</td><td class="val">€2.41T</td><td class="val">€107B</td><td class="pos">17.5%</td><td>2.3%</td><td class="pos">158%</td><td class="pos">11.2%</td><td><span class="tag t-amber">Bucket 2</span></td></tr>
+          <tr><td class="name">Banco Santander</td><td>🇪🇸 Spain</td><td class="val">€1.84T</td><td class="val">€83B</td><td class="pos">12.8%</td><td>2.8%</td><td class="pos">162%</td><td class="pos">12.4%</td><td><span class="tag t-amber">Bucket 2</span></td></tr>
+          <tr><td class="name">ING Group</td><td>🇳🇱 Netherlands</td><td class="val">€0.98T</td><td class="val">€46B</td><td class="pos">14.6%</td><td>1.8%</td><td class="pos">155%</td><td class="pos">14.2%</td><td><span class="tag t-amber">Bucket 1</span></td></tr>
+          <tr><td class="name">UniCredit</td><td>🇮🇹 Italy</td><td class="val">€0.94T</td><td class="val">€57B</td><td class="pos">16.1%</td><td>2.2%</td><td class="pos">148%</td><td class="pos">17.8%</td><td><span class="tag t-amber">Bucket 1</span></td></tr>
+          <tr><td class="name">Intesa Sanpaolo</td><td>🇮🇹 Italy</td><td class="val">€0.93T</td><td class="val">€59B</td><td class="pos">13.8%</td><td>1.9%</td><td class="pos">151%</td><td class="pos">14.4%</td><td><span class="tag t-blue">Bucket 1</span></td></tr>
+          <tr class="highlight"><td class="name">NBG (Greece)</td><td>🇬🇷 Greece</td><td class="val">€97.4B</td><td class="val">€8.2B</td><td class="pos">18.9%</td><td class="warn">6.4%</td><td class="pos">182%</td><td class="pos">11.2%</td><td><span class="tag t-navy">O-SII</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 3 — GLOBAL BANKING
+══════════════════════════════════ -->
+<section class="sec-block" id="global">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 03</div>
+      <div class="sec-title">Global Banking — Systemic Overview</div>
+      <div class="sec-sub">GLOBAL ASSETS · CONCENTRATION · G-SIB RANKINGS · US vs EU vs ASIA · CROSS-BORDER FLOWS</div>
+    </div>
+    <span class="sec-badge">BIS · IMF · FSB · World Bank · Fed · 2025</span>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Global assets by region -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>Global Bank Assets by Region (USD Trillion) — 2025</span>
+        <span class="panel-meta">BIS · IMF Global Financial Stability Report</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:240px"><canvas id="ch-global-assets"></canvas></div>
+      </div>
+    </div>
+    <!-- World top 10 banks -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--gold)"></span>World's 10 Largest Banks by Total Assets (USD Trillion) — 2025</span>
+        <span class="panel-meta">Annual Reports · S&P Global · The Banker</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:240px"><canvas id="ch-top10"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- G-SIB CET1 comparison -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--green)"></span>G-SIB CET1 Capital Ratios: US vs EU vs Asia (%) — 2025</span>
+        <span class="panel-meta">FSB G-SIB Assessment · Pillar 3 Disclosures</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-gsib-cet1"></canvas></div>
+      </div>
+    </div>
+    <!-- Global credit quality -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>NPL Ratios — Global Regional Comparison (%) — 2025</span>
+        <span class="panel-meta">IMF FSI Database · World Bank</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:220px"><canvas id="ch-global-npl"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global top banks table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--gold)"></span>Global Systemically Important Banks (G-SIBs) — Comparative 2025</span>
+      <span class="panel-meta">FSB G-SIB List Nov 2025 · Annual Reports · Pillar 3 · The Banker Top 1000</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>RANK</th><th>BANK</th><th>COUNTRY</th><th>ASSETS (USD T)</th>
+          <th>CET1</th><th>TIER 1 LEV.</th><th>NPL</th><th>RoE</th><th>G-SIB BUCKET</th><th>RATING</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="name">Industrial & Comm. Bank of China</td><td>🇨🇳</td><td class="val">$6.30T</td><td class="pos">14.2%</td><td class="pos">8.9%</td><td class="warn">1.8%</td><td class="pos">11.1%</td><td><span class="tag t-red">Bucket 3</span></td><td><span class="tag t-green">A</span></td></tr>
+          <tr><td>2</td><td class="name">Agricultural Bank of China</td><td>🇨🇳</td><td class="val">$5.82T</td><td class="pos">12.8%</td><td class="pos">8.4%</td><td class="warn">1.6%</td><td class="pos">10.8%</td><td><span class="tag t-amber">Bucket 2</span></td><td><span class="tag t-green">A</span></td></tr>
+          <tr><td>3</td><td class="name">China Construction Bank</td><td>🇨🇳</td><td class="val">$5.64T</td><td class="pos">13.4%</td><td class="pos">8.7%</td><td class="warn">1.7%</td><td class="pos">11.4%</td><td><span class="tag t-amber">Bucket 2</span></td><td><span class="tag t-green">A</span></td></tr>
+          <tr><td>4</td><td class="name">Bank of China</td><td>🇨🇳</td><td class="val">$4.98T</td><td class="pos">13.1%</td><td class="pos">8.1%</td><td class="warn">1.4%</td><td class="pos">10.2%</td><td><span class="tag t-amber">Bucket 2</span></td><td><span class="tag t-green">A</span></td></tr>
+          <tr><td>5</td><td class="name">JPMorgan Chase</td><td>🇺🇸</td><td class="val">$4.02T</td><td class="pos">15.3%</td><td class="pos">8.8%</td><td>0.8%</td><td class="pos">16.8%</td><td><span class="tag t-red">Bucket 4</span></td><td><span class="tag t-green">AA−</span></td></tr>
+          <tr><td>6</td><td class="name">Bank of America</td><td>🇺🇸</td><td class="val">$3.38T</td><td class="pos">13.5%</td><td class="pos">8.1%</td><td>0.6%</td><td class="pos">9.4%</td><td><span class="tag t-red">Bucket 3</span></td><td><span class="tag t-green">A+</span></td></tr>
+          <tr><td>7</td><td class="name">HSBC Holdings</td><td>🇬🇧</td><td class="val">$3.11T</td><td class="pos">14.9%</td><td class="pos">8.4%</td><td>2.1%</td><td class="pos">14.3%</td><td><span class="tag t-red">Bucket 3</span></td><td><span class="tag t-green">AA−</span></td></tr>
+          <tr><td>8</td><td class="name">BNP Paribas</td><td>🇫🇷</td><td class="val">$3.08T</td><td class="pos">13.8%</td><td class="pos">7.9%</td><td>2.1%</td><td class="pos">9.7%</td><td><span class="tag t-red">Bucket 3</span></td><td><span class="tag t-green">A+</span></td></tr>
+          <tr><td>9</td><td class="name">Citigroup</td><td>🇺🇸</td><td class="val">$2.42T</td><td class="pos">13.7%</td><td class="pos">8.4%</td><td>1.1%</td><td class="pos">7.2%</td><td><span class="tag t-amber">Bucket 2</span></td><td><span class="tag t-green">A</span></td></tr>
+          <tr><td>10</td><td class="name">Wells Fargo</td><td>🇺🇸</td><td class="val">$1.96T</td><td class="pos">11.4%</td><td class="pos">8.8%</td><td>0.9%</td><td class="pos">11.2%</td><td><span class="tag t-amber">Bucket 1</span></td><td><span class="tag t-green">A+</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 4 — NPL & CREDIT
+══════════════════════════════════ -->
+<section class="sec-block" id="npl">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 04</div>
+      <div class="sec-title">NPL Analysis & Credit Quality</div>
+      <div class="sec-sub">GREEK NPL RESOLUTION · HERCULES APS · EU CREDIT QUALITY CONVERGENCE · PROVISIONING · COVERAGE RATIOS</div>
+    </div>
+    <span class="sec-badge">EBA · Bank of Greece · ECB · IMF · OECD · 2025</span>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Hercules NPL sales -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>Greek NPL Stock Reduction (€B) — Hercules APS Impact 2018–2025</span>
+        <span class="panel-meta">Bank of Greece · Hellenic Capital Market Commission</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-hercules"></canvas></div>
+      </div>
+    </div>
+    <!-- EU NPL trend comparison -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--amber)"></span>EU Southern Periphery NPL Ratios (%) — 2015–2025</span>
+        <span class="panel-meta">EBA Risk Dashboard · ECB CBD</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-periphery-npl"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NPL detail table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>NPL & Credit Quality Metrics — Greece vs EU vs Global (2025)</span>
+      <span class="panel-meta">IMF FSI Database · EBA · World Bank Global Findex</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>GEOGRAPHY</th><th>NPL RATIO</th><th>NPL STOCK (€/USD B)</th>
+          <th>COVERAGE RATIO</th><th>PROVISION EXPENSE/LOANS</th>
+          <th>LOAN GROWTH YoY</th><th>MORTGAGE NPL</th><th>CORPORATE NPL</th><th>TREND</th>
+        </tr></thead>
+        <tbody>
+          <tr class="highlight"><td class="name">Greece 🇬🇷</td><td class="neg">8.7%</td><td class="val">€14.8B</td><td class="warn">70%</td><td class="warn">1.2%</td><td class="pos">+4.8%</td><td class="neg">11.2%</td><td class="neg">9.4%</td><td><span class="tag t-green">↓ IMPROVING</span></td></tr>
+          <tr><td class="name">Cyprus 🇨🇾</td><td class="neg">7.1%</td><td class="val">€3.2B</td><td class="val">74%</td><td class="warn">1.1%</td><td class="pos">+3.1%</td><td class="neg">9.8%</td><td class="warn">7.2%</td><td><span class="tag t-green">↓ IMPROVING</span></td></tr>
+          <tr><td class="name">Italy 🇮🇹</td><td class="warn">2.9%</td><td class="val">€48.1B</td><td class="pos">54%</td><td>0.6%</td><td class="pos">+1.8%</td><td class="warn">3.4%</td><td class="warn">2.7%</td><td><span class="tag t-blue">STABLE</span></td></tr>
+          <tr><td class="name">Spain 🇪🇸</td><td>2.3%</td><td class="val">€40.2B</td><td class="pos">52%</td><td>0.5%</td><td class="pos">+2.4%</td><td class="warn">2.8%</td><td>2.1%</td><td><span class="tag t-blue">STABLE</span></td></tr>
+          <tr><td class="name">France 🇫🇷</td><td>1.3%</td><td class="val">€54.6B</td><td class="pos">57%</td><td>0.3%</td><td class="pos">+1.4%</td><td>1.5%</td><td>1.4%</td><td><span class="tag t-blue">STABLE</span></td></tr>
+          <tr><td class="name">Germany 🇩🇪</td><td>1.4%</td><td class="val">€37.8B</td><td class="pos">43%</td><td>0.4%</td><td>+0.8%</td><td>1.2%</td><td>1.6%</td><td><span class="tag t-amber">WATCH: CRE</span></td></tr>
+          <tr><td class="name">EU Average</td><td class="warn">1.9%</td><td class="val">€361B</td><td class="val">52%</td><td>0.5%</td><td class="pos">+2.1%</td><td>2.3%</td><td>2.0%</td><td><span class="tag t-blue">STABLE</span></td></tr>
+          <tr><td class="name">United States 🇺🇸</td><td>1.0%</td><td class="val">$134B</td><td class="pos">62%</td><td>0.4%</td><td class="pos">+3.6%</td><td>1.1%</td><td>1.2%</td><td><span class="tag t-amber">WATCH: CRE</span></td></tr>
+          <tr><td class="name">Japan 🇯🇵</td><td>1.1%</td><td class="val">¥8.7T</td><td class="val">44%</td><td>0.3%</td><td>+0.4%</td><td>1.0%</td><td>1.3%</td><td><span class="tag t-blue">STABLE</span></td></tr>
+          <tr><td class="name">China 🇨🇳</td><td class="warn">2.1%</td><td class="val">¥32.4T</td><td class="val">209%</td><td>0.8%</td><td>+7.2%</td><td class="warn">3.1%</td><td class="warn">2.4%</td><td><span class="tag t-amber">WATCH</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 5 — STRESS TESTS
+══════════════════════════════════ -->
+<section class="sec-block" id="stress">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 05</div>
+      <div class="sec-title">Stress Tests & Resilience Analysis</div>
+      <div class="sec-sub">EBA 2023 STRESS TEST RESULTS · ECB SCAP · ADVERSE SCENARIO CAPITAL DEPLETION · GREEK BANKS</div>
+    </div>
+    <span class="sec-badge">EBA EU-Wide Stress Test 2023 · ECB SCAP 2024 · Bank of Greece FSR 2025</span>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Stress test CET1 depletion -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>EBA 2023 Stress Test — CET1 Ratio: Baseline vs Adverse Scenario</span>
+        <span class="panel-meta">EBA EU-Wide Stress Test 2023 · 70 banks tested</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:240px"><canvas id="ch-stress"></canvas></div>
+      </div>
+    </div>
+    <!-- Greek banks stress outcomes -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--amber)"></span>Greek Banks Stress Test — CET1 Trajectory Under Adverse Scenario</span>
+        <span class="panel-meta">EBA 2023 · ECB SSM Supervisory Review</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:240px"><canvas id="ch-stress-gr"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stress test results table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>EBA 2023 Stress Test Results — Selected Banks vs Greek Banks Full Comparison</span>
+      <span class="panel-meta">EBA EU-Wide Stress Test 2023 — Published July 2023</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>BANK</th><th>COUNTRY</th>
+          <th>CET1 START (2022)</th><th>CET1 BASELINE (2025)</th><th>CET1 ADVERSE (2025)</th>
+          <th>DEPLETION</th><th>ABOVE 8% MIN?</th><th>OUTCOME</th>
+        </tr></thead>
+        <tbody>
+          <tr class="highlight"><td class="name">NBG</td><td>🇬🇷 Greece</td><td>15.2%</td><td class="pos">18.1%</td><td class="warn">10.4%</td><td class="warn">−4.8pp</td><td><span class="tag t-green">YES +2.4pp</span></td><td><span class="tag t-green">PASS</span></td></tr>
+          <tr class="highlight"><td class="name">Eurobank</td><td>🇬🇷 Greece</td><td>14.8%</td><td class="pos">17.6%</td><td class="warn">10.1%</td><td class="warn">−4.7pp</td><td><span class="tag t-green">YES +2.1pp</span></td><td><span class="tag t-green">PASS</span></td></tr>
+          <tr class="highlight"><td class="name">Alpha Bank</td><td>🇬🇷 Greece</td><td>13.9%</td><td class="pos">16.8%</td><td class="warn">9.4%</td><td class="neg">−4.5pp</td><td><span class="tag t-green">YES +1.4pp</span></td><td><span class="tag t-green">PASS</span></td></tr>
+          <tr class="highlight"><td class="name">Piraeus Bank</td><td>🇬🇷 Greece</td><td>12.1%</td><td class="pos">15.4%</td><td class="warn">8.3%</td><td class="neg">−3.8pp</td><td><span class="tag t-amber">YES +0.3pp</span></td><td><span class="tag t-amber">MARGINAL</span></td></tr>
+          <tr><td class="name">BNP Paribas</td><td>🇫🇷</td><td>12.4%</td><td class="pos">14.8%</td><td class="pos">10.3%</td><td>−2.1pp</td><td><span class="tag t-green">YES +2.3pp</span></td><td><span class="tag t-green">PASS</span></td></tr>
+          <tr><td class="name">Deutsche Bank</td><td>🇩🇪</td><td>13.4%</td><td class="pos">15.1%</td><td class="pos">11.2%</td><td>−2.2pp</td><td><span class="tag t-green">YES +3.2pp</span></td><td><span class="tag t-green">PASS</span></td></tr>
+          <tr><td class="name">Société Générale</td><td>🇫🇷</td><td>13.5%</td><td class="pos">14.9%</td><td class="warn">9.0%</td><td class="warn">−4.5pp</td><td><span class="tag t-green">YES +1.0pp</span></td><td><span class="tag t-amber">PASS (TIGHT)</span></td></tr>
+          <tr><td class="name">UniCredit</td><td>🇮🇹</td><td>15.7%</td><td class="pos">18.2%</td><td class="pos">12.1%</td><td>−3.6pp</td><td><span class="tag t-green">YES +4.1pp</span></td><td><span class="tag t-green">STRONG PASS</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 6 — DIGITAL BANKING
+══════════════════════════════════ -->
+<section class="sec-block" id="digital">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 06</div>
+      <div class="sec-title">Digital Banking & FinTech Transformation</div>
+      <div class="sec-sub">ONLINE BANKING ADOPTION · MOBILE PAYMENTS · FINTECH INVESTMENT · CBDC PILOTS · BRANCH RATIONALISATION</div>
+    </div>
+    <span class="sec-badge">ECB · EBA · Eurostat · BIS · World Bank · Statista · 2025</span>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Digital banking adoption -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--blue)"></span>Digital Banking Adoption (% population) — EU Select Countries 2025</span>
+        <span class="panel-meta">Eurostat Digital Economy Survey 2025</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-digital"></canvas></div>
+      </div>
+    </div>
+    <!-- Branch reduction -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>Bank Branch Network Reduction — Greece vs EU (Index 2010=100)</span>
+        <span class="panel-meta">ECB Structural Financial Indicators · Bank of Greece</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-branches"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--blue)"></span>Digital Banking & FinTech Key Metrics — Greece vs EU vs Global (2025)</span>
+      <span class="panel-meta">ECB · Eurostat · BIS Payment Statistics · World Bank Findex</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>METRIC</th><th>GREECE 🇬🇷</th><th>EU AVERAGE</th><th>NORDIC LEADER</th><th>GLOBAL AVG</th><th>TREND</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="name">Online banking users (% adults)</td><td class="warn">61%</td><td class="val">72%</td><td class="pos">96% (🇩🇰)</td><td>54%</td><td><span class="tag t-green">↑ GROWING</span></td></tr>
+          <tr><td class="name">Mobile payments users (% adults)</td><td class="warn">43%</td><td class="val">58%</td><td class="pos">87% (🇸🇪)</td><td>48%</td><td><span class="tag t-green">↑ FAST GROWTH</span></td></tr>
+          <tr><td class="name">Bank branches / 100k adults</td><td class="warn">21.4</td><td class="val">18.3</td><td>4.2 (🇫🇮)</td><td>12.8</td><td><span class="tag t-red">↓ DECLINING</span></td></tr>
+          <tr><td class="name">ATMs per 100k adults</td><td class="val">62.1</td><td class="val">55.4</td><td>36.2 (🇸🇪)</td><td>42.1</td><td><span class="tag t-red">↓ DECLINING</span></td></tr>
+          <tr><td class="name">Contactless payments (% transactions)</td><td class="val">78%</td><td class="val">83%</td><td class="pos">97% (🇳🇴)</td><td>61%</td><td><span class="tag t-green">↑ GROWING</span></td></tr>
+          <tr><td class="name">FinTech investment (USD M)</td><td class="warn">$142M</td><td class="val">Avg €1.2B</td><td class="pos">€6.8B (🇬🇧)</td><td>$164B (global)</td><td><span class="tag t-green">↑ GROWING</span></td></tr>
+          <tr><td class="name">Open Banking API connections</td><td class="warn">Low</td><td class="val">Moderate</td><td class="pos">High (🇬🇧 🇩🇪)</td><td>Varies</td><td><span class="tag t-blue">DEVELOPING</span></td></tr>
+          <tr><td class="name">CBDC pilot stage</td><td class="warn">Observer</td><td class="val">Digital Euro piloting</td><td>Live (🇸🇪 e-krona)</td><td>134 countries exploring</td><td><span class="tag t-amber">IN PROGRESS</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 7 — REGULATION
+══════════════════════════════════ -->
+<section class="sec-block" id="regulation">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 07</div>
+      <div class="sec-title">Regulatory Framework & Compliance</div>
+      <div class="sec-sub">BASEL III/IV · CRR3 · MREL/TLAC · DORA · AML/KYC · SSM · SRM · ECB SREP REQUIREMENTS</div>
+    </div>
+    <span class="sec-badge">BIS · EC · ECB · EBA · ESRB · SRB · 2025</span>
+  </div>
+
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--navy)"></span>Basel III / IV Capital Requirements vs Actual Ratios — Greece & EU (2025)</span>
+      <span class="panel-meta">BIS Basel Framework · ECB SSM · CRR3 effective Jan 2025</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>CAPITAL METRIC</th><th>MINIMUM REQ.</th><th>CONSERVATION BUFFER</th>
+          <th>G-SIB SURCHARGE</th><th>EFFECTIVE FLOOR</th>
+          <th>GREECE AVG</th><th>EU AVG</th><th>US G-SIB AVG</th><th>STATUS (GR)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="name">CET1 Ratio</td><td>4.5%</td><td>+2.5%</td><td>+1–3.5%</td><td class="warn">7.0%+</td><td class="pos">16.2%</td><td class="pos">15.8%</td><td class="pos">13.9%</td><td><span class="tag t-green">AMPLE BUFFER</span></td></tr>
+          <tr><td class="name">Tier 1 Capital Ratio</td><td>6.0%</td><td>+2.5%</td><td>+1–3.5%</td><td class="warn">8.5%+</td><td class="pos">16.8%</td><td class="pos">16.4%</td><td class="pos">14.8%</td><td><span class="tag t-green">AMPLE BUFFER</span></td></tr>
+          <tr><td class="name">Total Capital Ratio</td><td>8.0%</td><td>+2.5%</td><td>+1–3.5%</td><td class="warn">10.5%+</td><td class="pos">19.4%</td><td class="pos">19.1%</td><td class="pos">17.2%</td><td><span class="tag t-green">AMPLE BUFFER</span></td></tr>
+          <tr><td class="name">Leverage Ratio (Tier 1)</td><td>3.0%</td><td>—</td><td>+0.5%</td><td class="warn">3.5%</td><td class="pos">8.2%</td><td class="pos">7.4%</td><td class="pos">7.1%</td><td><span class="tag t-green">COMPLIANT</span></td></tr>
+          <tr><td class="name">LCR (Liquidity)</td><td>100%</td><td>—</td><td>—</td><td>100%</td><td class="pos">166%</td><td class="pos">158%</td><td class="pos">122%</td><td><span class="tag t-green">COMPLIANT</span></td></tr>
+          <tr><td class="name">NSFR (Stable Funding)</td><td>100%</td><td>—</td><td>—</td><td>100%</td><td class="pos">121%</td><td class="pos">124%</td><td class="pos">118%</td><td><span class="tag t-green">COMPLIANT</span></td></tr>
+          <tr><td class="name">MREL (Bail-in buffer)</td><td>Varies</td><td>—</td><td>—</td><td>~20% RWA</td><td class="warn">24.1%</td><td class="pos">28.4%</td><td class="pos">31.2%</td><td><span class="tag t-amber">BUILDING</span></td></tr>
+          <tr><td class="name">Output Floor (CRR3)</td><td>72.5% (by 2030)</td><td>—</td><td>—</td><td>Phased in</td><td class="pos">N/A yet</td><td class="warn">Transition</td><td class="warn">Transition</td><td><span class="tag t-blue">PHASING IN</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="div-h reveal"></div>
+
+<!-- ══════════════════════════════════
+     SECTION 8 — FORECAST
+══════════════════════════════════ -->
+<section class="sec-block" id="forecast">
+  <div class="sec-hd reveal">
+    <div class="sec-hd-left">
+      <div class="sec-num">Section 08</div>
+      <div class="sec-title">Outlook & Forecast 2026–2030</div>
+      <div class="sec-sub">GREEK BANKING RECOVERY PATH · EU INTEGRATION · INTEREST RATE SCENARIOS · KEY RISKS · SCENARIO ANALYSIS</div>
+    </div>
+    <span class="sec-badge">IMF WEO · ECB SPF · Bank of Greece FSR · EBA Outlook · 2025–2030E</span>
+  </div>
+
+  <div class="g2 reveal">
+    <!-- Forecast NPL Greece -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--red)"></span>Greek NPL Ratio Forecast — Base vs Adverse vs Optimistic (%) 2025–2030E</span>
+        <span class="panel-meta">IMF Article IV · Bank of Greece FSR 2025 · EBA Outlook</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-fcst-npl"></canvas></div>
+      </div>
+    </div>
+    <!-- ECB rate forecast & impact -->
+    <div class="panel">
+      <div class="panel-hd">
+        <span class="panel-title"><span class="ptdot" style="background:var(--blue)"></span>ECB Rate Path Scenarios & Greek Bank NIM Impact (%) 2025–2028E</span>
+        <span class="panel-meta">ECB Survey of Professional Forecasters · Bank of Greece</span>
+      </div>
+      <div class="panel-body">
+        <div class="ch" style="height:230px"><canvas id="ch-fcst-rate"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forecast table -->
+  <div class="panel reveal">
+    <div class="panel-hd">
+      <span class="panel-title"><span class="ptdot" style="background:var(--gold)"></span>Greek Banking Sector — Forecast Key Metrics 2026–2030E</span>
+      <span class="panel-meta">Bank of Greece FSR · IMF · ECB SPF · EBA Transparency · Consensus Estimates</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="dtable">
+        <thead><tr>
+          <th>METRIC</th><th>2023A</th><th>2024A</th><th>2025A</th><th>2026E</th><th>2027E</th><th>2028E</th><th>2030E</th><th>DRIVER / RISK</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="name">Total Assets (€B)</td><td>308</td><td>320</td><td class="pos">336</td><td class="pos">352</td><td class="pos">368</td><td class="pos">385</td><td class="pos">420E</td><td>GDP growth, credit expansion</td></tr>
+          <tr><td class="name">NPL Ratio (%)</td><td>12.7%</td><td>10.4%</td><td class="warn">8.7%</td><td class="warn">6.8%</td><td>5.2%</td><td class="pos">4.1%</td><td class="pos">3.0–3.5%E</td><td>Servicer activity, GDP resilience</td></tr>
+          <tr><td class="name">CET1 Ratio (avg)</td><td>15.4%</td><td>15.8%</td><td class="pos">16.2%</td><td class="pos">16.5%</td><td class="pos">16.8%</td><td class="pos">17.1%</td><td class="pos">17–18%E</td><td>RWA growth; profit retention</td></tr>
+          <tr><td class="name">Return on Equity (%)</td><td>7.2%</td><td>8.4%</td><td class="pos">9.1%</td><td class="pos">9.8%</td><td class="pos">10.2%</td><td class="pos">10.5%</td><td class="pos">9–11%E</td><td>NIM compression risk from ECB cuts</td></tr>
+          <tr><td class="name">Net Interest Margin (%)</td><td>2.41%</td><td>2.72%</td><td class="warn">2.80%</td><td class="warn">2.65%</td><td class="warn">2.48%</td><td>2.35%</td><td>2.1–2.4%E</td><td>ECB rate cuts; deposit repricing</td></tr>
+          <tr><td class="name">Loan Growth YoY (%)</td><td>2.1%</td><td>3.4%</td><td class="pos">4.8%</td><td class="pos">5.5%</td><td class="pos">5.8%</td><td class="pos">5.2%</td><td class="pos">4–6%E</td><td>Recovery Fund disbursements</td></tr>
+          <tr><td class="name">LCR (%)</td><td>173%</td><td>169%</td><td class="pos">166%</td><td class="pos">158%</td><td class="pos">152%</td><td class="pos">148%</td><td class="pos">140–150%E</td><td>TLTRO repayments absorbed</td></tr>
+          <tr><td class="name">S&P Sovereign Rating</td><td>BB+</td><td>BBB−</td><td class="pos">BBB−</td><td class="pos">BBB</td><td class="pos">BBB</td><td class="pos">BBB+E</td><td class="pos">A−E</td><td>Fiscal consolidation, ESM exit</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+</div><!-- /layout -->
+</div><!-- /page -->
+
+<!-- ═══════════ CITATIONS ═══════════ -->
+<div class="cit-section">
+  <div class="cit-title">Data Sources & Methodological Notes</div>
+  <div class="cit-grid">
+    <div class="cit"><sup>1</sup> Bank of Greece. "Annual Report on the Greek Economy and Banking System 2025." Athens: Bank of Greece, 2025.</div>
+    <div class="cit"><sup>2</sup> European Banking Authority. "EBA Risk Dashboard Q3 2025." EBA Publications, October 2025.</div>
+    <div class="cit"><sup>3</sup> ECB Banking Supervision. "Supervisory Banking Statistics Q3 2025." Frankfurt: ECB, 2025.</div>
+    <div class="cit"><sup>4</sup> ECB. "Consolidated Banking Data — Full Dataset." Statistical Data Warehouse, 2025.</div>
+    <div class="cit"><sup>5</sup> EBA. "EU-Wide Stress Test 2023 Results." European Banking Authority, July 2023.</div>
+    <div class="cit"><sup>6</sup> IMF. "Greece Article IV Consultation Staff Report 2025." IMF Country Report No. 25/XX.</div>
+    <div class="cit"><sup>7</sup> IMF. "Global Financial Stability Report, April 2025." Washington: International Monetary Fund.</div>
+    <div class="cit"><sup>8</sup> FSB. "2025 List of Global Systemically Important Banks (G-SIBs)." Financial Stability Board, November 2025.</div>
+    <div class="cit"><sup>9</sup> BIS. "BIS Statistics — Global Banking Statistics, Q3 2025." Bank for International Settlements, December 2025.</div>
+    <div class="cit"><sup>10</sup> ESM. "ESM Annual Report 2024." European Stability Mechanism, 2025.</div>
+    <div class="cit"><sup>11</sup> S&P Global Ratings. "Greece Rating Action." RatingsDirect, November 2025.</div>
+    <div class="cit"><sup>12</sup> Eurostat. "Digital Economy and Society Statistics — Households and Individuals, 2025." Luxembourg: Eurostat.</div>
+    <div class="cit"><sup>13</sup> ECB. "Survey of Professional Forecasters Q4 2025." Frankfurt: European Central Bank, November 2025.</div>
+    <div class="cit"><sup>14</sup> World Bank. "Financial Soundness Indicators Database." FSI.imf.org, 2025.</div>
+    <div class="cit"><sup>15</sup> The Banker. "Top 1000 World Banks 2025." FT Group, London, 2025.</div>
+    <div class="cit"><sup>16</sup> Hellenic Capital Market Commission. "Hercules APS Programme Data 2024–2025." HCMC, Athens, 2025.</div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <span>BankAnalytics Intelligence Platform — Greece · Europe · World · 2025</span>
+  <span>Sources: ECB · Bank of Greece · EBA · IMF · BIS · FSB · World Bank · S&P · Moody's · Fitch</span>
+  <span>Historical: 2005–2025 · Forecast: 2026–2030E · Updated: March 2026</span>
+</footer>
+
+<script>
+/* ═══════════════════ TIMESTAMP ═══════════════════ */
+function tick(){
+  const n=new Date();
+  document.getElementById('ts').textContent=
+    n.toLocaleDateString('el-GR',{day:'2-digit',month:'short',year:'numeric'})+' '+
+    n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+tick();setInterval(tick,1000);
+
+/* ═══════════════════ CHART DEFAULTS ═══════════════════ */
+Chart.defaults.font.family="'JetBrains Mono',monospace";
+Chart.defaults.font.size=11;
+Chart.defaults.color='#546e8a';
+Chart.defaults.borderColor='#e2e6ed';
+Chart.defaults.plugins.legend.labels.boxWidth=10;
+Chart.defaults.plugins.legend.labels.padding=14;
+Chart.defaults.plugins.tooltip.backgroundColor='#0f2044';
+Chart.defaults.plugins.tooltip.titleColor='#ffffff';
+Chart.defaults.plugins.tooltip.bodyColor='rgba(255,255,255,0.75)';
+Chart.defaults.plugins.tooltip.borderColor='rgba(184,134,11,0.4)';
+Chart.defaults.plugins.tooltip.borderWidth=1;
+Chart.defaults.plugins.tooltip.padding=10;
+
+const NAVY='#0f2044',BLUE='#1d6fa4',GREEN='#1a7a4a',RED='#c0392b',
+      AMBER='#c97a10',GOLD='#b8860b',VIOLET='#6c3483',SLATE='#546e8a',
+      NAVY2='rgba(15,32,68,',BLUE2='rgba(29,111,164,',GREEN2='rgba(26,122,74,',
+      RED2='rgba(192,57,43,',AMBER2='rgba(201,122,16,',GOLD2='rgba(184,134,11,';
+
+/* ═══ 1. Greek NPL Ratio ═══ */
+new Chart(document.getElementById('ch-npl'),{
+  type:'line',
+  data:{
+    labels:['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets:[{
+      label:'Greece NPL (%)',
+      data:[9.1,14.4,18.8,26.8,33.5,36.4,44.8,47.5,44.6,40.2,35.8,30.1,18.4,12.7,10.4,8.7],
+      borderColor:RED,backgroundColor:RED2+'0.08)',
+      fill:true,tension:0.4,borderWidth:2.5,pointRadius:3,pointBackgroundColor:RED
+    },{
+      label:'EU Average NPL (%)',
+      data:[3.1,4.2,5.3,6.8,6.1,5.8,5.4,4.2,3.4,2.7,2.9,2.3,1.9,1.8,1.9,1.9],
+      borderColor:BLUE,backgroundColor:'transparent',
+      tension:0.4,borderWidth:2,borderDash:[5,4],pointRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}}}}
+});
+
+/* ═══ 2. CET1 Big 4 ═══ */
+new Chart(document.getElementById('ch-cet1'),{
+  type:'line',
+  data:{
+    labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      {label:'NBG',     data:[10.2,16.4,16.9,16.4,17.1,15.8,16.3,16.8,17.4,18.2,18.9],borderColor:NAVY,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Eurobank',data:[16.8,17.1,17.3,14.2,15.4,14.8,15.1,15.7,16.6,17.8,18.4],borderColor:BLUE,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Alpha',   data:[11.2,12.4,17.9,18.8,17.8,14.8,15.2,14.7,15.6,16.4,17.1],borderColor:AMBER,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Piraeus', data:[12.1,16.8,13.7,12.4,14.1,13.2,14.1,13.4,14.1,15.4,16.8],borderColor:RED,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:8}}}
+});
+
+/* ═══ 3. Greek Total Assets ═══ */
+new Chart(document.getElementById('ch-assets-gr'),{
+  type:'bar',
+  data:{
+    labels:['2005','2007','2009','2011','2013','2015','2017','2019','2021','2023','2025'],
+    datasets:[{
+      label:'Total Banking Assets (€B)',
+      data:[242,362,447,461,432,397,358,314,298,308,336],
+      backgroundColor:ctx=>{const g=ctx.chart.ctx.createLinearGradient(0,0,0,220);g.addColorStop(0,NAVY2+'0.5)');g.addColorStop(1,NAVY2+'0.1)');return g;},
+      borderColor:NAVY,borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>'€'+v+'B'}}}}
+});
+
+/* ═══ 4. Profitability RoE & RoA ═══ */
+new Chart(document.getElementById('ch-profitability'),{
+  type:'bar',
+  data:{
+    labels:['2010','2012','2014','2016','2018','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      {label:'RoE (%)',data:[-14.2,-18.8,-7.8,-2.1,0.8,-7.8,3.1,5.4,7.2,8.4,9.1],
+        backgroundColor:d=>d.parsed.y<0?RED2+'0.35)':GREEN2+'0.35)',borderColor:d=>d.parsed.y<0?RED:GREEN,borderWidth:1.5,borderRadius:2},
+      {label:'RoA (%)',data:[-1.4,-1.8,-0.7,-0.2,0.1,-0.5,0.3,0.5,0.7,0.9,1.1],
+        type:'line',borderColor:BLUE,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:2,yAxisID:'y2'}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{
+      x:{grid:{display:false}},
+      y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},title:{display:true,text:'RoE (%)',font:{size:9}}},
+      y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'%'},title:{display:true,text:'RoA (%)',font:{size:9}}}
+    }}
+});
+
+/* ═══ 5. EU CET1 by Country ═══ */
+new Chart(document.getElementById('ch-eu-cet1'),{
+  type:'bar',
+  data:{
+    labels:['Sweden','Luxembourg','Estonia','Denmark','Latvia','Lithuania','Finland','Germany','Netherlands','Austria','Belgium','France','Ireland','Spain','Italy','Portugal','Greece','Cyprus'],
+    datasets:[{
+      label:'CET1 Ratio (%)',
+      data:[22.1,20.8,19.4,19.1,18.9,18.7,18.2,17.1,16.8,16.4,16.1,15.9,15.4,14.8,14.2,18.4,16.2,19.8],
+      backgroundColor:d=>{const v=d.parsed.y;return v>=18?GREEN2+'0.5)':v>=15?BLUE2+'0.5)':AMBER2+'0.4)';},
+      borderColor:d=>{const v=d.parsed.y;return v>=18?GREEN:v>=15?BLUE:AMBER;},
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:10},y:{grid:{display:false},ticks:{font:{size:9}}}}}
+});
+
+/* ═══ 6. EU NPL by Country ═══ */
+new Chart(document.getElementById('ch-eu-npl'),{
+  type:'bar',
+  data:{
+    labels:['Greece','Cyprus','Portugal','Italy','Spain','Ireland','Austria','Belgium','Germany','France','Netherlands','Finland'],
+    datasets:[{
+      label:'NPL Ratio (%)',
+      data:[8.7,7.1,3.2,2.9,2.3,1.8,1.7,1.5,1.4,1.3,1.1,0.9],
+      backgroundColor:d=>{const v=d.parsed.y;return v>5?RED2+'0.45)':v>2?AMBER2+'0.4)':GREEN2+'0.35)';},
+      borderColor:d=>{const v=d.parsed.y;return v>5?RED:v>2?AMBER:GREEN;},
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{display:false}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}}}}
+});
+
+/* ═══ 7. ECB rate vs NIM ═══ */
+new Chart(document.getElementById('ch-nim-ecb'),{
+  type:'line',
+  data:{
+    labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026E'],
+    datasets:[
+      {label:'ECB Deposit Rate (%)',data:[-0.1,-0.4,-0.4,-0.4,-0.5,-0.5,-0.5,0.0,3.5,4.0,2.5,2.0],
+        borderColor:NAVY,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'EU Bank Avg NIM (%)',data:[1.42,1.38,1.41,1.45,1.39,1.28,1.24,1.31,1.84,2.11,1.96,1.82],
+        borderColor:BLUE,backgroundColor:BLUE2+'0.08)',fill:true,tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Greece Bank Avg NIM (%)',data:[2.41,2.38,2.29,2.24,2.18,2.04,2.01,2.12,2.41,2.72,2.80,2.65],
+        borderColor:RED,backgroundColor:'transparent',borderDash:[4,3],tension:0.4,borderWidth:2,pointRadius:3}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}}}}
+});
+
+/* ═══ 8. EU RoE by country ═══ */
+new Chart(document.getElementById('ch-eu-roe'),{
+  type:'bar',
+  data:{
+    labels:['UniCredit (IT)','ING (NL)','CaixaBank (ES)','Santander (ES)','NBG (GR)','Eurobank (GR)','BNP (FR)','Deutsche (DE)','Commerzbank (DE)','ABN AMRO (NL)','Société Gén. (FR)','Alpha (GR)'],
+    datasets:[{
+      label:'RoE 2025 (%)',
+      data:[17.8,14.2,14.1,12.4,11.2,12.8,9.7,7.3,7.8,9.1,6.8,9.4],
+      backgroundColor:d=>d.parsed.y>=12?GREEN2+'0.45)':d.parsed.y>=9?BLUE2+'0.45)':AMBER2+'0.4)',
+      borderColor:d=>d.parsed.y>=12?GREEN:d.parsed.y>=9?BLUE:AMBER,
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:9}}}}}
+});
+
+/* ═══ 9. Global Assets Doughnut ═══ */
+new Chart(document.getElementById('ch-global-assets'),{
+  type:'doughnut',
+  data:{
+    labels:['China','United States','Eurozone','UK','Japan','Other Asia','Rest of World'],
+    datasets:[{
+      data:[55.2,24.8,32.4,10.1,18.4,22.1,20.0],
+      backgroundColor:[RED2+'0.5)',BLUE2+'0.5)',NAVY2+'0.5)',GREEN2+'0.5)',AMBER2+'0.5)',GOLD2+'0.5)','rgba(84,110,138,0.4)'],
+      borderColor:[RED,BLUE,NAVY,GREEN,AMBER,GOLD,SLATE],
+      borderWidth:1.5,hoverOffset:6
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+    plugins:{legend:{position:'right',labels:{font:{size:9},padding:10}},
+      tooltip:{callbacks:{label:ctx=>` $${ctx.parsed}T (${(ctx.parsed/183*100).toFixed(1)}%)`}}}}
+});
+
+/* ═══ 10. Top 10 Banks ═══ */
+new Chart(document.getElementById('ch-top10'),{
+  type:'bar',
+  data:{
+    labels:['ICBC (CN)','AgBank (CN)','CCB (CN)','BOC (CN)','JPMorgan (US)','BofA (US)','HSBC (UK)','BNP (FR)','Citi (US)','Wells (US)'],
+    datasets:[{
+      label:'Total Assets (USD T)',
+      data:[6.3,5.82,5.64,4.98,4.02,3.38,3.11,3.08,2.42,1.96],
+      backgroundColor:[RED2+'0.4)',RED2+'0.4)',RED2+'0.4)',RED2+'0.4)',BLUE2+'0.4)',BLUE2+'0.4)',GREEN2+'0.4)',NAVY2+'0.4)',BLUE2+'0.4)',BLUE2+'0.4)'],
+      borderColor:[RED,RED,RED,RED,BLUE,BLUE,GREEN,NAVY,BLUE,BLUE],
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>'$'+v+'T'}},y:{grid:{display:false},ticks:{font:{size:9}}}}}
+});
+
+/* ═══ 11. G-SIB CET1 Scatter ═══ */
+new Chart(document.getElementById('ch-gsib-cet1'),{
+  type:'bar',
+  data:{
+    labels:['JPMorgan','BofA','Citi','Wells','Goldman','BNP','Deutsche','SocGen','UniCredit','ICBC','CCB','MUFG','SMFG'],
+    datasets:[
+      {label:'US G-SIBs', data:[15.3,13.5,13.7,11.4,14.9,null,null,null,null,null,null,null,null],backgroundColor:BLUE2+'0.5)',borderColor:BLUE,borderWidth:1.5,borderRadius:2},
+      {label:'EU G-SIBs', data:[null,null,null,null,null,13.8,13.9,13.5,16.1,null,null,null,null],backgroundColor:NAVY2+'0.5)',borderColor:NAVY,borderWidth:1.5,borderRadius:2},
+      {label:'Asian G-SIBs',data:[null,null,null,null,null,null,null,null,null,14.2,13.4,11.8,12.4],backgroundColor:GREEN2+'0.45)',borderColor:GREEN,borderWidth:1.5,borderRadius:2},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{display:false},ticks:{font:{size:9}}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:8}}}
+});
+
+/* ═══ 12. Global NPL ═══ */
+new Chart(document.getElementById('ch-global-npl'),{
+  type:'bar',
+  data:{
+    labels:['Sub-Saharan Africa','Middle East & N.Africa','South Asia','Eastern Europe','Greece (GR)','Southern EU','Western EU','China','Latin America','US','Japan','Nordic EU'],
+    datasets:[{
+      label:'NPL Ratio (%)',
+      data:[9.8,7.4,6.2,5.4,8.7,3.1,1.5,2.1,3.4,1.0,1.1,0.7],
+      backgroundColor:d=>{const v=d.parsed.y;return v>7?RED2+'0.45)':v>3?AMBER2+'0.4)':GREEN2+'0.35)';},
+      borderColor:d=>{const v=d.parsed.y;return v>7?RED:v>3?AMBER:GREEN;},
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:8}}}}}
+});
+
+/* ═══ 13. Hercules NPL Reduction ═══ */
+new Chart(document.getElementById('ch-hercules'),{
+  type:'bar',
+  data:{
+    labels:['2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      {label:'NPL Stock (€B)',data:[88.4,74.1,61.2,52.4,38.1,27.4,19.8,14.8],
+        backgroundColor:RED2+'0.4)',borderColor:RED,borderWidth:1.5,borderRadius:2},
+      {label:'Cumulative Transactions (€B)',type:'line',data:[0,8.2,22.4,38.6,56.8,72.1,81.4,87.8],
+        borderColor:GREEN,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:3,yAxisID:'y2'}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{
+      x:{grid:{display:false}},
+      y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>'€'+v+'B'},title:{display:true,text:'NPL Stock',font:{size:9}}},
+      y2:{position:'right',grid:{display:false},ticks:{callback:v=>'€'+v+'B'},title:{display:true,text:'Transactions',font:{size:9}}}
+    }}
+});
+
+/* ═══ 14. Periphery NPL Comparison ═══ */
+new Chart(document.getElementById('ch-periphery-npl'),{
+  type:'line',
+  data:{
+    labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      {label:'Greece',   data:[36.4,44.8,47.5,44.6,40.2,35.8,30.1,18.4,12.7,10.4,8.7],borderColor:RED,backgroundColor:'transparent',tension:0.4,borderWidth:2.5,pointRadius:3},
+      {label:'Cyprus',   data:[48.2,42.1,38.9,34.1,28.4,18.2,13.4,9.8,8.2,7.6,7.1],borderColor:AMBER,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:2},
+      {label:'Italy',    data:[16.8,15.9,14.4,9.8,7.2,4.4,3.7,2.9,2.8,2.9,2.9],borderColor:BLUE,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:2},
+      {label:'Portugal', data:[17.1,14.8,13.2,9.4,6.1,4.8,4.1,3.8,3.4,3.2,3.2],borderColor:GREEN,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:2},
+      {label:'Spain',    data:[6.2,5.8,5.4,4.1,3.2,2.8,2.5,2.4,2.3,2.3,2.3],borderColor:VIOLET,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:2,borderDash:[4,3]},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'}}}}
+});
+
+/* ═══ 15. Stress Test Results ═══ */
+new Chart(document.getElementById('ch-stress'),{
+  type:'bar',
+  data:{
+    labels:['BNP\n(FR)','Deutsche\n(DE)','Soc Gen\n(FR)','UniCredit\n(IT)','Santander\n(ES)','ING\n(NL)','Commerzbank\n(DE)','Erste\n(AT)'],
+    datasets:[
+      {label:'Starting CET1 (2022)',data:[12.4,13.4,13.5,15.7,12.5,14.5,13.4,14.2],backgroundColor:BLUE2+'0.3)',borderColor:BLUE,borderWidth:1.5,borderRadius:2},
+      {label:'Baseline CET1 (2025)',data:[14.8,15.1,14.9,18.2,14.2,16.8,16.1,18.4],backgroundColor:GREEN2+'0.3)',borderColor:GREEN,borderWidth:1.5,borderRadius:2},
+      {label:'Adverse CET1 (2025)',data:[10.3,11.2,9.0,12.1,9.8,12.4,9.8,11.2],backgroundColor:RED2+'0.3)',borderColor:RED,borderWidth:1.5,borderRadius:2},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{display:false}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:6}}}
+});
+
+/* ═══ 16. Greek Banks Stress Timeline ═══ */
+new Chart(document.getElementById('ch-stress-gr'),{
+  type:'line',
+  data:{
+    labels:['2022 Start','2023','2024 E','2025 E'],
+    datasets:[
+      {label:'NBG — Adverse',     data:[15.2,13.8,11.9,10.4],borderColor:NAVY,backgroundColor:NAVY2+'0.06)',fill:true,tension:0.4,borderWidth:2,pointRadius:4},
+      {label:'Eurobank — Adverse',data:[14.8,13.4,11.6,10.1],borderColor:BLUE,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:4},
+      {label:'Alpha — Adverse',   data:[13.9,12.8,10.9,9.4], borderColor:AMBER,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:4},
+      {label:'Piraeus — Adverse', data:[12.1,11.2,9.4,8.3],  borderColor:RED,backgroundColor:'transparent',tension:0.4,borderWidth:2,pointRadius:4},
+      {label:'8% CET1 Floor',     data:[8,8,8,8],             borderColor:'rgba(0,0,0,0.3)',backgroundColor:'transparent',borderDash:[6,4],borderWidth:1.5,pointRadius:0}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:6}}}
+});
+
+/* ═══ 17. Digital Adoption ═══ */
+new Chart(document.getElementById('ch-digital'),{
+  type:'bar',
+  data:{
+    labels:['Denmark','Norway','Finland','Sweden','Netherlands','Estonia','Germany','Austria','France','Belgium','Ireland','Spain','Italy','Poland','Portugal','Greece','Romania','Bulgaria'],
+    datasets:[{
+      label:'Online banking users (% adults)',
+      data:[97,96,94,91,90,88,83,80,78,76,74,71,67,65,63,61,42,38],
+      backgroundColor:d=>d.parsed.y>=80?GREEN2+'0.45)':d.parsed.y>=65?BLUE2+'0.4)':AMBER2+'0.35)',
+      borderColor:d=>d.parsed.y>=80?GREEN:d.parsed.y>=65?BLUE:AMBER,
+      borderWidth:1.5,borderRadius:2
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},max:100},y:{grid:{display:false},ticks:{font:{size:9}}}}}
+});
+
+/* ═══ 18. Branch Reduction ═══ */
+new Chart(document.getElementById('ch-branches'),{
+  type:'line',
+  data:{
+    labels:['2010','2012','2014','2016','2018','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      {label:'Greece (Index 2010=100)',data:[100,90,78,64,52,44,41,38,35,33,31],borderColor:RED,backgroundColor:RED2+'0.07)',fill:true,tension:0.4,borderWidth:2.5,pointRadius:3},
+      {label:'EU Average (Index 2010=100)',data:[100,95,89,83,77,72,69,66,63,61,59],borderColor:NAVY,backgroundColor:'transparent',borderDash:[5,3],tension:0.4,borderWidth:2,pointRadius:2},
+      {label:'Germany (Index 2010=100)',data:[100,97,93,88,82,76,73,70,67,64,62],borderColor:BLUE,backgroundColor:'transparent',borderDash:[3,3],tension:0.4,borderWidth:1.5,pointRadius:2},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v},min:25}}}
+});
+
+/* ═══ 19. Forecast NPL Scenarios ═══ */
+new Chart(document.getElementById('ch-fcst-npl'),{
+  type:'line',
+  data:{
+    labels:['2025','2026E','2027E','2028E','2029E','2030E'],
+    datasets:[
+      {label:'Base Case',  data:[8.7,6.8,5.2,4.1,3.6,3.0],borderColor:BLUE,backgroundColor:BLUE2+'0.07)',fill:true,tension:0.4,borderWidth:2.5,pointRadius:4},
+      {label:'Optimistic', data:[8.7,6.1,4.4,3.2,2.6,2.1],borderColor:GREEN,backgroundColor:'transparent',borderDash:[4,3],tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Adverse',    data:[8.7,9.2,10.1,9.4,8.8,7.9],borderColor:RED,backgroundColor:RED2+'0.05)',fill:true,borderDash:[6,4],tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'EU Target 3%',data:[3,3,3,3,3,3],borderColor:'rgba(0,0,0,0.2)',backgroundColor:'transparent',borderDash:[3,3],borderWidth:1.5,pointRadius:0}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{x:{grid:{color:'rgba(0,0,0,0.04)'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},min:0}}}
+});
+
+/* ═══ 20. ECB Rate Scenarios ═══ */
+new Chart(document.getElementById('ch-fcst-rate'),{
+  type:'line',
+  data:{
+    labels:['2025','2026E','2027E','2028E'],
+    datasets:[
+      {label:'ECB Rate — Base',    data:[2.5,2.0,1.75,1.75],borderColor:NAVY,backgroundColor:'transparent',tension:0.4,borderWidth:2.5,pointRadius:4},
+      {label:'ECB Rate — Dovish',  data:[2.5,1.5,1.0,0.75], borderColor:GREEN,backgroundColor:'transparent',borderDash:[4,3],tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'ECB Rate — Hawkish', data:[2.5,2.5,2.25,2.25],borderColor:RED,backgroundColor:'transparent',borderDash:[6,4],tension:0.4,borderWidth:2,pointRadius:3},
+      {label:'Greek Bank NIM — Base',data:[2.8,2.65,2.48,2.35],borderColor:GOLD,backgroundColor:GOLD2+'0.08)',fill:true,tension:0.4,borderWidth:2,pointRadius:4,yAxisID:'y2'},
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top'}},
+    scales:{
+      x:{grid:{color:'rgba(0,0,0,0.04)'}},
+      y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{callback:v=>v+'%'},title:{display:true,text:'ECB Rate (%)',font:{size:9}}},
+      y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'%'},title:{display:true,text:'NIM (%)',font:{size:9}}}
+    }}
+});
+
+/* ═══ SCROLL REVEAL ═══ */
+const ro=new IntersectionObserver(e=>{
+  e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('revealed');ro.unobserve(el.target);}});
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
